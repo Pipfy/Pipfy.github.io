@@ -41,10 +41,17 @@ nav .name {
   font-weight: bold;
   font-size: 1.75rem;
   color: #fff;
+  margin-right: 20px; /* Adjust spacing between name and links */
+}
+
+nav .nav-links {
+  flex-grow: 1; /* Allow links to fill remaining space */
+  display: flex;
+  justify-content: flex-end; /* Right align links */
 }
 
 nav .nav-links a {
-  margin-left: 30px;
+  margin-left: 20px; /* Adjust spacing between links */
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
@@ -138,48 +145,41 @@ nav .nav-links a:hover {
 @media (max-width: 768px) {
   nav .name {
     font-size: 1.5rem;
+    margin-right: 10px; /* Adjust spacing */
   }
-
+  nav .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-end; /* Right align links */
+    margin-top: 10px; /* Adjust spacing */
+  }
   nav .nav-links a {
-    font-size: 0.875rem;
-    margin-left: 15px;
+    margin: 10px 0; /* Adjust spacing between links */
   }
-
-  #title {
-    font-size: 1.5rem;
+  .wrapper:before {
+    width: 100px;
+    height: 100px;
   }
-
+  .wrapper {
+    position: relative; /* Ensure relative positioning */
+    text-align: center; /* Center align content */
+  }
+  .wrapper img {
+    width: 150px; /* Increased logo size for mobile */
+    height: 140px; /* Adjust height proportionally */
+    border-radius: 50%; /* Maintain circular shape */
+    position: relative; /* Maintain relative positioning */
+    top: 50%; /* Shift image halfway down */
+    left: 1.5%;
+    transform: translateY(-50%); /* Center vertically */
+  }
   .about-me h2 {
     font-size: 1.5rem;
   }
-
   .about-me p {
     font-size: 1rem;
   }
 }
 
-@media (max-width: 480px) {
-  nav .name {
-    font-size: 1.25rem;
-  }
-
-  nav .nav-links a {
-    font-size: 0.75rem;
-    margin-left: 10px;
-  }
-
-  #title {
-    font-size: 1.25rem;
-  }
-
-  .about-me h2 {
-    font-size: 1.25rem;
-  }
-
-  .about-me p {
-    font-size: 0.875rem;
-  }
-}
 
   
 
