@@ -174,8 +174,8 @@ nav .nav-links a:hover {
     height: 100vh; /* Full viewport height */
   }
   .wrapper img {
-    width: 150px; /* Increased logo size for mobile */
-    height: 140px; /* Adjust height proportionally */
+    width: 300px; /* Increased logo size for mobile */
+    height: 270px; /* Adjust height proportionally */
     border-radius: 50%; /* Maintain circular shape */
     position: absolute; /* Position relative to .wrapper */
     top: 50%; /* Align from the top */
