@@ -156,21 +156,32 @@ nav .nav-links a:hover {
     margin: 10px 0; /* Adjust spacing between links */
   }
   .wrapper:before {
-    width: 100px;
-    height: 100px;
+    content: '';
+    display: block;
+    width: 100px; /* Adjust size of circle */
+    height: 100px; /* Adjust size of circle */
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
   .wrapper {
     position: relative; /* Ensure relative positioning */
     text-align: center; /* Center align content */
+    height: 100vh; /* Full viewport height */
   }
   .wrapper img {
     width: 150px; /* Increased logo size for mobile */
     height: 140px; /* Adjust height proportionally */
     border-radius: 50%; /* Maintain circular shape */
-    position: relative; /* Maintain relative positioning */
-    top: 50%; /* Shift image halfway down */
-    left: 1.5%;
-    transform: translateY(-50%); /* Center vertically */
+    position: absolute; /* Position relative to .wrapper */
+    top: 50%; /* Align from the top */
+    left: 50%; /* Align from the left */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    z-index: 2; /* Ensure logo is above the pseudo element */
   }
   .about-me h2 {
     font-size: 1.5rem;
@@ -179,6 +190,10 @@ nav .nav-links a:hover {
     font-size: 1rem;
   }
 }
+
+
+
+
 
 
   
