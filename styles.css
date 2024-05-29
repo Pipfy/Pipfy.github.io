@@ -1,138 +1,186 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
-  html {
-    font-size: 16px;
-  }
-  
-  body {
-    font-family: 'Lato', sans-serif;
-    position: relative;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    color: #fff;
-    line-height: 1.6;
-  }
-  
-  /* Navigation Styles */
-  nav {
-    background-color: #151515;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: none;
-  }
-  
-  nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #151515;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: none;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav .name {
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: #fff;
+}
+
+nav .nav-links a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+  color: #808080;
+}
+
+/* Parallax Star Background */
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow for parallax effect */
+}
+
+#stars1, #stars2, #stars3 {
+  width: 1px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+#stars1 {
+  width: 2px;
+  height: 2px;
+}
+
+#stars2 {
+  width: 3px;
+  height: 3px;
+}
+
+#stars3 {
+  width: 4px;
+  height: 4px;
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  font-family: Lato;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* About Me Section */
+.about-me {
+  background-color: #f0f0f0;
+  padding: 50px 0;
+}
+
+.about-me .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-me h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   nav .name {
-    font-weight: bold;
-    font-size: 28px;
-    color: #fff;
+    font-size: 1.5rem;
   }
-  
+
   nav .nav-links a {
-    margin-left: 30px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    font-size: 0.875rem;
+    margin-left: 15px;
   }
-  
-  nav .nav-links a:hover {
-    color: #808080;
-  }
-  
-  /* Parallax Star Background */
-  .wrapper {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Hide overflow for parallax effect */
-  }
-  
-  #stars1, #stars2, #stars3 {
-    width: 1px;
-    height: 1px;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
-  }
-  
-  #stars1 {
-    width: 2px;
-    height: 2px;
-  }
-  
-  #stars2 {
-    width: 3px;
-    height: 3px;
-  }
-  
-  #stars3 {
-    width: 4px;
-    height: 4px;
-  }
-  
+
   #title {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    color: #fff;
-    text-align: center;
-    font-family: Lato;
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 10px;
-    margin-top: -60px;
-    padding-left: 10px;
+    font-size: 1.5rem;
   }
-  
-  #title span {
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  /* About Me Section */
-  .about-me {
-    background-color: #f0f0f0;
-    padding: 50px 0;
-  }
-  
-  .about-me .container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
+
   .about-me h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333;
+    font-size: 1.5rem;
   }
-  
+
   .about-me p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #666;
+    font-size: 1rem;
   }
+}
+
+@media (max-width: 480px) {
+  nav .name {
+    font-size: 1.25rem;
+  }
+
+  nav .nav-links a {
+    font-size: 0.75rem;
+    margin-left: 10px;
+  }
+
+  #title {
+    font-size: 1.25rem;
+  }
+
+  .about-me h2 {
+    font-size: 1.25rem;
+  }
+
+  .about-me p {
+    font-size: 0.875rem;
+  }
+}
+
   
 
   #stars {
